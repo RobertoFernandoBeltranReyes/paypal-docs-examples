@@ -1,0 +1,48 @@
+<div class="content" role="main">
+    <mat-grid-list cols="2">
+        <mat-grid-tile>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Item Number</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of json">
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.itemNumber }}</td>
+                        <td>{{ item.price }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <form [formGroup]="PayPalCreateForm">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" formControlName="name" required maxlength="50" matInput>
+                </div>
+                <div>
+                    <label for="lastname">Last Name:</label>
+                    <input type="text" id="lastname" name="lastname">
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div>
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address"></textarea>
+                </div>
+                <div #paypal></div>
+            </form>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
+

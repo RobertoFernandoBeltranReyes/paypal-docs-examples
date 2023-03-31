@@ -59,7 +59,7 @@ export class CartComponent implements OnInit {
           ],
           redirect_urls: {
             return_url: 'https://www.google.com/',
-            cancel_url: 'https://www.google.com/maps/'
+            cancel_url: 'https://www.google.com/maps'
           },
         })
       },
